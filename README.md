@@ -52,4 +52,11 @@ Changes
  - `Average scripting time to generate last 10 frames: 0.4914999999993597ms`
 3. JavaScript & layout optimization. I changed the `changePizzaSizes(size)` function: Before the resize took 273ms, now it takes around 1ms. I took the for loop calculations for the new width out of the for loop function. Since all pizzas are the same size to begin with, I only need calculations for one pizza. I then apply that to the rest.
  - `Time to resize pizzas: 0.9249999999956344ms`
+
+
+Review updates
+--
+*The first reviewer told me to change the number of columnns. The second told me to put them back to the original number.*
 4. Changed the number of pizzas to 40 and the number of columns in `document.addEventListener('DOMContentLoaded', function())`.
+5. Changed the querySelectorAll(".randomPizzaContainer") to getElementsByClassName(".randomPizzaContainer").
+6. Took out `var pizzasDiv = document.getElementById("randomPizzas");` out of the for loop that loads the pizzas. This way this does not have to be done each time.

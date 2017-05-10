@@ -451,7 +451,7 @@ var resizePizzas = function(size) {
   function changePizzaSizes(size) {
 
     //CHANGE: I took out the calculation out of the for loop. Since all pizzas are the same size, I only do calculations for one pizza[0], and then apply that size to the rest of the pizzas
-    var pizzas = document.querySelectorAll(".randomPizzaContainer")
+    var pizzas = document.getElementsByClassName(".randomPizzaContainer");
     var dx = determineDx(pizzas[0], size);
     var newwidth = (pizzas[0].offsetWidth + dx) + 'px';
 
@@ -471,9 +471,12 @@ var resizePizzas = function(size) {
 
 window.performance.mark("mark_start_generating"); // collect timing data
 
+
+//CHANGE: took this out of the for loop below to have this var on hand instead of calculating every time
+var pizzasDiv = document.getElementById("randomPizzas");
+
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
