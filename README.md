@@ -57,6 +57,12 @@ Changes
 Review updates
 --
 *The first reviewer told me to change the number of columnns. The second told me to put them back to the original number.*
-4. Changed the number of pizzas to 40 and the number of columns in `document.addEventListener('DOMContentLoaded', function())`.
+4. Changed the number of pizzas to dybamic calculation based on window height:
+```
+var numberOfPizzas = window.innerHeight / s * cols;
+
+for (var i = 0; i < numberOfPizzas; i++) {...}
+```
 5. Changed the querySelectorAll(".randomPizzaContainer") to getElementsByClassName(".randomPizzaContainer").
 6. Took out `var pizzasDiv = document.getElementById("randomPizzas");` out of the for loop that loads the pizzas. This way this does not have to be done each time.
+7. TYPO FIXED: Removed a dot from `document.getElementsByClassName("randomPizzaContainer")`.
