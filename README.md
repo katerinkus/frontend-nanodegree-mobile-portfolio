@@ -44,4 +44,6 @@ Changes
 --
 1. Layout thrashing issue. Changed the for loop in `updatePositions()` function. I took out `scrollTop` values out of the for loop into a variable. This way the function does not have to get the same value for each item.
 2. Compositing and painting. I put floating pizzas on a separate layer to reduce painting. Now the only painted thing is the scrollbar. To do that I added two properties to the css file for the `mover` element:  `will-change` and `transform` (for unsupported browsers).
+ - `Average scripting time to generate last 10 frames: 0.4914999999993597ms`
 3. JavaScript & layout optimization. I changed the `changePizzaSizes(size)` function: Before the resize took 273ms, now it takes around 1ms. I took the for loop calculations for the new width out of the for loop function. Since all pizzas are the same size to begin with, I only need calculations for one pizza. I then apply that to the rest.
+ - `Time to resize pizzas: 0.9249999999956344ms`
