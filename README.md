@@ -9,3 +9,6 @@ Changes to the Mobile website
 3. Added a media query for css links in html (media = "print"). It did not impact phones significantly and helped raise the desktop score by a few point.
  - Desktop: 94
  - Mobile: 87
+4. Added a media query for phones. As expected that did not change mobile score. However, desktop score increased by a few points.
+ - Desktop: 96
+ - Mobile: 87
