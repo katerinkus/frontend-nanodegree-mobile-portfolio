@@ -1,5 +1,8 @@
-File list
+Part 1
 ==
+
+File list
+--
 1. *readable-index.html* - the HTML file you can follow
 2. *index.html* - minified html
 3. *smartphones.css* - css file for portrait orientation
@@ -8,7 +11,7 @@ File list
 6. *perfmatters.min.js* - minified js file
 
 Changes to the Mobile website
-==
+--
 1. Moved Google Analytics script into the end of `<body>` element and made the scipt `async`. My score increased by 5 points. Google Analytics is not a necessary script to render, therefore it should be loaded asynchronously from the content. Otherwise, it becomes render-blocking.
  - Desktop: 91
  - Mobile: 78
@@ -33,3 +36,12 @@ Notes
 --
 If I could control the server, I would set `Cache-Control` expiration dates and compression.
 Decided against further image compression, the files are already tiny and look really bad when compressed any further.
+
+Part 2
+==
+
+Changes
+--
+1. Layout thrashing issue. Changed the for loop in `updatePositions()` function. I took out `scrollTop` values out of the for loop into a variable. This way the function does not have to get the same value for each item.
+2. Compositing and painting. I put floating pizzas on a separate layer to reduce painting. Now the only painted thing is the scrollbar. To do that I added two properties to the css file for the `mover` element:  `will-change` and `transform` (for unsupported browsers).
+3. JavaScript & layout optimization. I changed the `changePizzaSizes(size)` function: Before the resize took 273ms, now it takes around 1ms. I took the for loop calculations for the new width out of the for loop function. Since all pizzas are the same size to begin with, I only need calculations for one pizza. I then apply that to the rest.
