@@ -1,3 +1,8 @@
+Installation
+Clone or download the repository. Open `index.html` in the browser to see the first part of the project.
+Open `pizza/html` to see the second part of the project.
+
+
 Part 1
 ==
 
@@ -47,3 +52,4 @@ Changes
  - `Average scripting time to generate last 10 frames: 0.4914999999993597ms`
 3. JavaScript & layout optimization. I changed the `changePizzaSizes(size)` function: Before the resize took 273ms, now it takes around 1ms. I took the for loop calculations for the new width out of the for loop function. Since all pizzas are the same size to begin with, I only need calculations for one pizza. I then apply that to the rest.
  - `Time to resize pizzas: 0.9249999999956344ms`
+4. Changed the number of pizzas to 40 and the number of columns in `document.addEventListener('DOMContentLoaded', function())`.
