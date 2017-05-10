@@ -12,3 +12,6 @@ Changes to the Mobile website
 4. Added a media query for phones in portrait. That did not change mobile score. However, desktop score increased by a few points. At this point mobile and desktop only have one render-blocking css file: `styles.css`.
  - Desktop: 96
  - Mobile: 87
+5. Compressed profile image and pizzeria image.
+ - Desktop: 95
+ - Mobile: 89
