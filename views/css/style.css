@@ -29,10 +29,14 @@ form {
   font-weight: 800;
 }
 
+/*CHANGE Put background pizzas on a separate layer*/
 .mover {
   position: fixed;
   width: 256px;
   z-index: -1;
+  will-change: transform;
+  /*for unsupported browsers:*/
+  transform: translateZ(0);
 }
 
 .randomPizzaContainer {
